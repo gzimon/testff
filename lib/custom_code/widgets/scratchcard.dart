@@ -13,12 +13,12 @@ class Scratchcard extends StatefulWidget {
     Key? key,
     this.width,
     this.height,
-    this.img,
+    required this.img,
   }) : super(key: key);
 
   final double? width;
   final double? height;
-  final String? img;
+  final String img;
 
   @override
   _ScratchcardState createState() => _ScratchcardState();
@@ -36,11 +36,16 @@ class _ScratchcardState extends State<Scratchcard> {
         color: Colors.red,
         onChange: (value) => print("Scratch progress: $value%"),
         onThreshold: () => print("Threshold reached, you won!"),
-        child: Container(
+        child: Image.network(
+          widget.img,
+          height: widget.height,
+          width: widget.width,
+        ),
+        /*child: Container(
           height: 300,
           width: 300,
           color: Colors.blue,
-        ),
+        ),*/
       ),
     );
   }
