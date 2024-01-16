@@ -25,33 +25,47 @@ class Scratchcard extends StatefulWidget {
 }
 
 class _ScratchcardState extends State<Scratchcard> {
+  bool _textShow = false;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: widget.width,
-      height: widget.height,
-      child: Scratcher(
-        brushSize: 30,
-        threshold: 50,
-        //color: Colors.red,
-        image: Image.network(
-          'https://firebasestorage.googleapis.com/v0/b/globalsport-2023.appspot.com/o/logo%20gsa.jpg?alt=media&token=9893bb09-a4cb-474a-8076-da42ad180184',
-          height: widget.height,
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Text('Hello World'),
+        Text('Hello World 2'),
+        Container(
           width: widget.width,
-        ),
-        onChange: (value) => print("Scratch progress: $value%"),
-        onThreshold: () => print("Threshold reached, you won!"),
-        child: Image.network(
-          widget.img,
           height: widget.height,
-          width: widget.width,
+          child: Scratcher(
+            brushSize: 30,
+            threshold: 50,
+            //color: Colors.red,
+            image: Image.network(
+              'https://firebasestorage.googleapis.com/v0/b/globalsport-2023.appspot.com/o/logo%20gsa.jpg?alt=media&token=9893bb09-a4cb-474a-8076-da42ad180184',
+              height: widget.height,
+              width: widget.width,
+            ),
+            onChange: (value) => print("Scratch progress: $value%"),
+            //onThreshold: () => print("Threshold reached, you won!"),
+            onThreshold: () {
+              setState(() {
+                _textShow = true;
+              });
+            },
+            child: Image.network(
+              widget.img,
+              height: widget.height,
+              width: widget.width,
+            ),
+            /*child: Container(
+            height: 300,
+            width: 300,
+            color: Colors.blue,
+            ),*/
+          ),
         ),
-        /*child: Container(
-          height: 300,
-          width: 300,
-          color: Colors.blue,
-        ),*/
-      ),
+        if (_textShow) Text('A kuku panie kruku')
+      ],
     );
   }
 }
