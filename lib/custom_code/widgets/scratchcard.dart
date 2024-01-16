@@ -33,7 +33,12 @@ class _ScratchcardState extends State<Scratchcard> {
       child: Scratcher(
         brushSize: 30,
         threshold: 50,
-        color: Colors.red,
+        //color: Colors.red,
+        image: Image.network(
+          'https://firebasestorage.googleapis.com/v0/b/globalsport-2023.appspot.com/o/logo%20gsa.jpg?alt=media&token=9893bb09-a4cb-474a-8076-da42ad180184',
+          height: widget.height,
+          width: widget.width,
+        ),
         onChange: (value) => print("Scratch progress: $value%"),
         onThreshold: () => print("Threshold reached, you won!"),
         child: Image.network(
