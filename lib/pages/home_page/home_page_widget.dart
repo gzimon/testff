@@ -146,23 +146,13 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   style: FlutterFlowTheme.of(context).bodyMedium,
                 ),
                 Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(20.0),
-                      bottomRight: Radius.circular(20.0),
-                      topLeft: Radius.circular(20.0),
-                      topRight: Radius.circular(20.0),
-                    ),
-                  ),
-                  child: Container(
+                  width: 300.0,
+                  height: 300.0,
+                  child: custom_widgets.Scratchcard(
                     width: 300.0,
                     height: 300.0,
-                    child: custom_widgets.Scratchcard(
-                      width: 300.0,
-                      height: 300.0,
-                      img:
-                          'https://firebasestorage.googleapis.com/v0/b/globalsport-2023.appspot.com/o/socks.jpg?alt=media&token=4b0b965b-9044-49e2-b913-7c8335a5da91',
-                    ),
+                    img:
+                        'https://firebasestorage.googleapis.com/v0/b/globalsport-2023.appspot.com/o/socks.jpg?alt=media&token=4b0b965b-9044-49e2-b913-7c8335a5da91',
                   ),
                 ),
               ]
