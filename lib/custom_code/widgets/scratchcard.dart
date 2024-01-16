@@ -31,8 +31,6 @@ class _ScratchcardState extends State<Scratchcard> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        Text('Hello World'),
-        Text('Hello World 2'),
         Container(
           width: widget.width,
           height: widget.height,
