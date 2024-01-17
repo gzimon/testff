@@ -26,6 +26,7 @@ class Scratchcard extends StatefulWidget {
 
 class _ScratchcardState extends State<Scratchcard> {
   bool _textShow = false;
+  double _opacity = 0.0;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -50,10 +51,11 @@ class _ScratchcardState extends State<Scratchcard> {
                 _textShow = true;
               });
             },
-            child: Image.network(
-              widget.img,
-              height: widget.height,
-              width: widget.width,
+            child: Text(
+              "Skarpety",
+              style: TextStyle(
+                fontSize: 50,
+              ),
             ),
             /*child: Container(
             height: 300,
