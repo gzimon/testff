@@ -49,22 +49,27 @@ class _ScratchcardState extends State<Scratchcard> {
             onThreshold: () {
               setState(() {
                 _textShow = true;
+                _opacity = 1.0;
               });
             },
-            child: Container(
-              height: widget.height,
-              width: widget.width,
-              alignment: Alignment.center,
-              child: Text(
-                "Skarpety",
-                style: TextStyle(
-                  fontSize: 50,
+            child: AnimatedOpacity(
+              duration: Duration(milliseconds: 300),
+              opacity: _opacity,
+              child: Container(
+                height: widget.height,
+                width: widget.width,
+                alignment: Alignment.center,
+                child: Text(
+                  "Skarpety",
+                  style: TextStyle(
+                    fontSize: 50,
+                  ),
                 ),
               ),
             ),
           ),
         ),
-        if (_textShow) Text('A kuku panie kruku')
+        //if (_textShow) Text('A kuku panie kruku')
       ],
     );
   }
