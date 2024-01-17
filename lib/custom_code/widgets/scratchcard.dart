@@ -51,17 +51,17 @@ class _ScratchcardState extends State<Scratchcard> {
                 _textShow = true;
               });
             },
-            child: Text(
-              "Skarpety",
-              style: TextStyle(
-                fontSize: 50,
+            child: Container(
+              height: widget.height,
+              width: widget.width,
+              alignment: Alignment.center,
+              child: Text(
+                "Skarpety",
+                style: TextStyle(
+                  fontSize: 50,
+                ),
               ),
             ),
-            /*child: Container(
-            height: 300,
-            width: 300,
-            color: Colors.blue,
-            ),*/
           ),
         ),
         if (_textShow) Text('A kuku panie kruku')
