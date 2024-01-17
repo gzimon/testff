@@ -153,7 +153,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     height: 300.0,
                     img:
                         'https://firebasestorage.googleapis.com/v0/b/globalsport-2023.appspot.com/o/logo%20gsa.jpg?alt=media&token=9893bb09-a4cb-474a-8076-da42ad180184',
-                    textColor: FlutterFlowTheme.of(context).secondaryBackground,
+                    textColor: FlutterFlowTheme.of(context).primaryText,
                     textSize: 50.0,
                     textText: 'Skarpety',
                   ),
